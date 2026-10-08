@@ -29,7 +29,7 @@ export default function ProductCard({ p }) {
 
                   <div className="w-24 h-32 flex-shrink-0">
                         <img 
-                              src={`/${p.img}`} 
+                              src={p.img}  
                               alt={p.name} 
                               className="w-full h-full object-contain rounded-md" 
                         />
