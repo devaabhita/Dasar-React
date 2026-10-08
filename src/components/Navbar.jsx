@@ -28,6 +28,12 @@ items-center">
                 <Link to="/checkout" className="hover:text-gray-200">
                     Checkout
                 </Link>
+                <Link
+                    to="/admin/dashboard"
+                    className="hover:bg-white/20 px-3 py-1 rounded transition text-sm flex items-center bg-white/10"
+                >
+                    Admin Panel
+                </Link>
             </div>
         </nav>
     );

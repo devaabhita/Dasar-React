@@ -16,6 +16,10 @@ Dashboard
 <Link to="/admin/about" className="hover:bg-gray-200 p-2 rounded">
 About
 </Link>
+<hr className="my-2 border-gray-200" />
+<Link to="/" className="text-teal-700 hover:bg-teal-50 p-2 rounded font-medium flex items-center gap-2">
+← Kembali ke Toko
+</Link>
 </nav>
 </div>
 );

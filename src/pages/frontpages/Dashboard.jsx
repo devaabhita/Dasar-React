@@ -2,9 +2,10 @@ import { useContext } from "react";
 import { useSearchParams } from "react-router-dom";
 import ProductCard from "../../components/ProductCard";
 import { CategoryContext } from "../../layouts/MainLayout";
-import { products } from "../../utils/data";
+import { useProducts } from "../../utils/ProductContext";
 
 export default function Dashboard() {
+    const { products } = useProducts();
     const [searchParams] = useSearchParams();
     const query = searchParams.get("q")?.toLowerCase() || "";
     const { selectedCategory } = useContext(CategoryContext);

@@ -1,10 +1,28 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
 
 // nama Provider CartProvider (Bebas)
 export function CartProvider({ children }) {
-   const [cart, setCart] = useState([]);
+   // Inisialisasi cart dari localStorage agar data tidak hilang saat di-refresh
+   const [cart, setCart] = useState(() => {
+      try {
+         const savedCart = localStorage.getItem("cart");
+         return savedCart ? JSON.parse(savedCart) : [];
+      } catch (error) {
+         console.error("Gagal memuat cart dari localStorage:", error);
+         return [];
+      }
+   });
+
+   // Simpan cart ke localStorage setiap kali terjadi perubahan
+   useEffect(() => {
+      try {
+         localStorage.setItem("cart", JSON.stringify(cart));
+      } catch (error) {
+         console.error("Gagal menyimpan cart ke localStorage:", error);
+      }
+   }, [cart]);
 
    // Tambah ke cart
    const addToCart = (product) => {
