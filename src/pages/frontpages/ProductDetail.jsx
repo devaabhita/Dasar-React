@@ -1,15 +1,20 @@
 import { useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
+import { products } from "../../utils/data";
 
 export default function ProductDetail() {
-   /* Mengambil ID produk dari URL */
+   /* Mengambil ID/slug produk dari URL */
    const { id } = useParams();
 
    // Mengambil state yang dikirim dari Link
    const location = useLocation();
 
-   // state adalah objek produk yang dikirim dari Link
-   const p = location.state;
+   // state adalah objek produk yang dikirim dari Link, jika tidak ada cari dari data dummy
+   const p = location.state || products.find(prod => prod.slug === id || prod.id.toString() === id);
+
+   if (!p) {
+      return <div className="p-6">Produk tidak ditemukan.</div>;
+   }
 
    // State untuk rating dan review
    const [rating, setRating] = useState(0);
