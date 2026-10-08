@@ -1,3 +1,11 @@
+import atomichabits from "../assets/atomichabits.png";
+import sangalkemis from "../assets/sangalkemis.png";
+import liketheflowing from "../assets/liketheflowing.png";
+import kalkulus from "../assets/kalkulus.png";
+import sapiens from "../assets/sapiens.png";
+import tpohabit from "../assets/tpohabit.png";
+import sicacing from "../assets/sicacing.png";
+
 export const products = [
    {
       id: 1,
@@ -8,7 +16,7 @@ export const products = [
       category: 3,
       category_name: "Pengembangan Diri",
       rating: 4.9,
-      img: "src/assets/atomichabits.png",
+      img: atomichabits,
    },
    {
       id: 2,
@@ -19,7 +27,7 @@ export const products = [
       category: 2,
       category_name: "Novel",
       rating: 4.9,
-      img: "src/assets/sangalkemis.png",
+      img: sangalkemis,
    },
    {
       id: 3,
@@ -30,7 +38,7 @@ export const products = [
       category: 1,
       category_name: "Novel",
       rating: 4.5,
-      img: "src/assets/liketheflowing.png",
+      img: liketheflowing,
    },
    {
       id: 4,
@@ -41,7 +49,7 @@ export const products = [
       category: 1,
       category_name: "Pendidikan",
       rating: 4.2,
-      img: "src/assets/kalkulus.png",
+      img: kalkulus,
    },
    {
       id: 5,
@@ -52,7 +60,7 @@ export const products = [
       category: 4,
       category_name: "Sejarah",
       rating: 4.7,
-      img: "src/assets/sapiens.png",
+      img: sapiens,
    },
    {
       id: 6,
@@ -63,7 +71,7 @@ export const products = [
       category: 3,
       category_name: "Pengembangan Diri",
       rating: 4.6,
-      img: "src/assets/tpohabit.png",
+      img: tpohabit,
    },
    {
       id: 7,
@@ -74,6 +82,6 @@ export const products = [
       category: 1,
       category_name: "Novel",
       rating: 4.8,
-      img: "src/assets/sicacing.png",
-   }
+      img: sicacing,
+   },
 ];
